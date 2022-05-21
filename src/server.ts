@@ -1,9 +1,13 @@
 import express from 'express'
+import cors from 'cors'
+import { routes } from './routes/client'
 
-const server = express()
+const app = express()
 
-server.get('/', (request, response) => {
-  return response.send('Hello!')
-})
+app.use(cors())
 
-export default server
+app.use(routes)
+
+app.use(express.json())
+
+app.listen(8001)
