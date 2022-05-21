@@ -9,5 +9,5 @@ const indexController = new IndexController()
 
 const rpcController = new RpcController()
 
-routes.get('/', indexController.index)
-routes.get('/getRPCProgamming/:date', rpcController.index)
+routes.get('/ola', indexController.index)
+routes.get('/getRPCProgramme/', rpcController.index)
