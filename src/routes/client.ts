@@ -10,4 +10,4 @@ const indexController = new IndexController()
 const rpcController = new RpcController()
 
 routes.get('/ola', indexController.index)
-routes.get('/getRPCProgramme/', rpcController.index)
+routes.get('/getRPCProgramme/:date', rpcController.index)
