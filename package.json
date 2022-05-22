@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/server.js",
     "build": "babel src --out-dir dist --no-copy-ignored",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/server.ts' -e ts",
     "test": "jest",
