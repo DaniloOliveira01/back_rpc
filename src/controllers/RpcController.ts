@@ -18,8 +18,8 @@ export class RpcController {
         const programme = {
           title: prog.title,
           description: prog.description,
-          time_start: moment.unix(prog.start_time).format('HH:mm').toString(),
-          time_end: moment.unix(prog.end_time).format('HH:mm').toString(),
+          time_start: moment.unix(prog.start_time).format('H:mm').toString(),
+          time_end: moment.unix(prog.end_time).format('H:mm').toString(),
           URL_IMG: prog.custom_info.Graficos.URL,
         }
         programmeParse.push(programme)
