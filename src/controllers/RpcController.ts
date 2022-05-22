@@ -11,11 +11,7 @@ export class RpcController {
     const data = date || new Date().toLocaleString().split(' ')[0]
 
     try {
-      const url = await api.get('/programmes/1337', {
-        params: {
-          data: date,
-        },
-      })
+      const url = await api.get(`/programmes/1337?date=${date}`)
 
       const programeData = url.data.programme.entries
       for (const prog of programeData) {
@@ -29,6 +25,7 @@ export class RpcController {
         programmeParse.push(programme)
       }
       return res.json({ data: data, programmeParse })
+      
 
     } catch (error) {
 
