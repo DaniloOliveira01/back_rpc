@@ -2,6 +2,7 @@ import { Request, Response } from 'express'
 import { api } from '../services/api'
 import { ProgrammeType } from '../interfaces/date'
 import moment from 'moment'
+import dayjs from 'dayjs'
 export class RpcController {
   async index(req: Request, res: Response) {
     const { date } = req.params
@@ -18,8 +19,8 @@ export class RpcController {
         const programme = {
           title: prog.title,
           description: prog.description,
-          time_start: moment.unix(prog.start_time).format('H:mm').toString(),
-          time_end: moment.unix(prog.end_time).format('H:mm').toString(),
+          time_start: dayjs.unix(prog.start_time).format('H:mm').toString(),
+          time_end: dayjs.unix(prog.end_time).format('H:mm').toString(),
           URL_IMG: prog.custom_info.Graficos.URL,
         }
         programmeParse.push(programme)
