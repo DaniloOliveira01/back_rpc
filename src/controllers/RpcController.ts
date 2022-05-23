@@ -1,7 +1,6 @@
 import { Request, Response } from 'express'
 import { api } from '../services/api'
 import { ProgrammeType } from '../interfaces/date'
-import moment from 'moment'
 import dayjs from 'dayjs'
 export class RpcController {
   async index(req: Request, res: Response) {
