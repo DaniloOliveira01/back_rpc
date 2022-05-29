@@ -18,8 +18,8 @@ export class RpcController {
         const programme = {
           title: prog.title,
           description: prog.description,
-          time_start: dayjs.unix(prog.start_time).locale('en-US').format('H:mm').toString(),
-          time_end: dayjs.unix(prog.end_time).locale('en-US').format('H:mm').toString(),
+          time_start: dayjs.unix(prog.start_time).locale('pt-BR').format('H:mm').toString(),
+          time_end: dayjs.unix(prog.end_time).locale('pt-BR').format('H:mm').toString(),
           URL_IMG: prog.custom_info.Graficos.URL,
         }
         programmeParse.push(programme)
