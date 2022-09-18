@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "nodemon --watch 'src/' --exec 'ts-node src/server.ts' -e ts",
+    "dev": "ts-node-dev src/server.ts",
     "lint": "eslint --fix --ext .js,.ts,.json ."
   },
   "dependencies": {
@@ -34,6 +34,7 @@
     "prettier": "^2.6.2",
     "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.6.4"
   }
 }
