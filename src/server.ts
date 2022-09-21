@@ -1,7 +1,7 @@
-import express from 'express'
-import cors from 'cors'
 import { programRouter } from './api/routes/programs'
 import { errorHandle } from './api/middlewares/errorHandle'
+import express from 'express'
+import cors from 'cors'
 
 const app = express()
 

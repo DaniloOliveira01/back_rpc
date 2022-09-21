@@ -9,7 +9,7 @@ export class ShowProgramsUseCase {
     private hoursProvider: IHoursProvider
   ) {}
 
-  async execute({ date }: IShowProgramsDTO) {
+  async executeDateProgrammes({ date }: IShowProgramsDTO) {
     const programmeParse: ProgrammeType[] = []
     const data = date || new Date().toLocaleString().split(' ')[0]
 
